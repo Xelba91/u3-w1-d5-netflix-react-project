@@ -3,6 +3,7 @@ import Slider from "react-slick"; // Importa il componente Slider da react-slick
 import "slick-carousel/slick/slick.css"; // Importa i file CSS per lo stile del carosello
 import "slick-carousel/slick/slick-theme.css"; // Importa i file CSS per lo stile del tema del carosello
 import SingleMovie from "./SingleMovie";
+import { Col } from "react-bootstrap";
 
 class NetflixCarousel extends Component {
   state = {
@@ -73,10 +74,9 @@ class NetflixCarousel extends Component {
       <Slider {...settings} className={stile}>
         {/* Renderizza il componente Slider con le impostazioni e la classe specificate  */}
         {movies.map((movie) => (
-          <div key={movie.imdbID} className="text-center">
+          <Col key={movie.imdbID} className="text-center">
             <SingleMovie year={movie.Year} title={movie.Title} img={movie.Poster} />
-            {/* Passa l'URL del poster del film al componente SingleMovie */}
-          </div>
+          </Col>
         ))}
       </Slider>
     );

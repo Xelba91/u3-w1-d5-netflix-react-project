@@ -51,3 +51,14 @@ p {
   background-color: #212529; /* Cambio di colore del background al passaggio del mouse */
   color: black; /* Cambio di colore del testo al passaggio del mouse */
 }
+
+#movie:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+  z-index: 88;
+}
+
+#movie {
+  z-index: 88;
+}

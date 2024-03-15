@@ -2,13 +2,14 @@ import React from "react";
 import { Container, Row, Col, Dropdown } from "react-bootstrap";
 import { TextLeft, Grid } from "react-bootstrap-icons";
 
+// icone a destra in alto
 const iconStyle = {
   marginRight: "1rem",
   border: "solid white 0.2px",
   padding: "1px",
 };
 
-const NetflixHeroUp = (props) => {
+const NetflixHeroUp = () => {
   return (
     <Container fluid className="mt-3">
       <Row className="justify-content-between">
@@ -19,19 +20,22 @@ const NetflixHeroUp = (props) => {
               Genres
             </Dropdown.Toggle>
             <Dropdown.Menu className="bg-black text-white rounded">
-              <Dropdown.Item className="text-white rounded" href="#harry">
-                {props.title}
+              <Dropdown.Item className="text-white rounded" href="#Harry Potter">
+                Harry Potter
               </Dropdown.Item>
-              <Dropdown.Item className="text-white rounded" href="#starWars">
-                Star Wars
+              <Dropdown.Item className="text-white rounded" href="#Matrix">
+                Matrix
               </Dropdown.Item>
               <Dropdown.Item
                 className="text-white rounded"
-                href="#matrix"
+                href="#Avengers"
                 // onMouseEnter={(e) => (e.target.style.color = "black")}
                 // onMouseLeave={(e) => (e.target.style.color = "white")}
               >
-                Matrix
+                Avengers
+              </Dropdown.Item>
+              <Dropdown.Item className="text-white rounded" href="#Star Wars">
+                Star Wars
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

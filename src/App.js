@@ -10,8 +10,10 @@ function App() {
     <div>
       <NetflixNavbar />
       <NetflixHeroUp></NetflixHeroUp>
-      <NetflixHero title={"harry potter"}></NetflixHero>
+      <NetflixHero title={"Harry Potter"}></NetflixHero>
       <NetflixHero title={"Matrix"}></NetflixHero>
+      <NetflixHero title={"Avengers"}></NetflixHero>
+      <NetflixHero title={"Star Wars"}></NetflixHero>
       <NetflixFooter />
     </div>
   );
