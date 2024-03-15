@@ -1,7 +1,7 @@
 import React from "react";
 
 const SingleMovie = ({ img, title, year }) => (
-  <div className="mt-3 mb-3" id="movie">
+  <div className="my-3" id="movie">
     <img
       src={img}
       className="poster"
