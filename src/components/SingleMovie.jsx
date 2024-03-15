@@ -1,7 +1,7 @@
 import React from "react";
 
 const SingleMovie = ({ img, title, year }) => (
-  <div id="movie">
+  <div className="mt-3 mb-3" id="movie">
     <img
       src={img}
       className="poster"
@@ -9,7 +9,7 @@ const SingleMovie = ({ img, title, year }) => (
       style={{ width: "95%", height: "300px", objectFit: "fill", objectPosition: "50% 50%" }}
     />
     <p className="mx-2">{title}</p>
-    <p>{year}</p>
+    <p>- {year} -</p>
   </div>
 );
 

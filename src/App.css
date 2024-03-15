@@ -56,9 +56,4 @@ p {
   transform: scale(1.1);
   transition: 0.5s;
   cursor: pointer;
-  z-index: 88;
-}
-
-#movie {
-  z-index: 88;
 }

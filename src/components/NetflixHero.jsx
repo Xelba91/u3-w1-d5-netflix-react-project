@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import NetflixCarousel from "./NetflixCarousel";
 
 const NetflixHero = (props) => {
@@ -9,7 +9,9 @@ const NetflixHero = (props) => {
         <h4 className="text-start" id={props.title}>
           {props.title}
         </h4>
-        <NetflixCarousel searchQuery={props.title} />
+        <Row>
+          <NetflixCarousel searchQuery={props.title} />
+        </Row>
       </div>
     </Container>
   );

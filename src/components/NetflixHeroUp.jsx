@@ -17,7 +17,7 @@ const NetflixHeroUp = () => {
           <h2 className="mb-1">Movies</h2>
           <Dropdown className="ms-3">
             <Dropdown.Toggle className="bg-black text-white rounded" variant="dark">
-              Genres
+              Saga
             </Dropdown.Toggle>
             <Dropdown.Menu className="bg-black text-white rounded">
               <Dropdown.Item className="text-white rounded" href="#Harry Potter">
