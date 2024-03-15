@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: white;
+  background-color: #141414;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: gray;
+  text-decoration: none;
+  font-size: 0.7rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-icon {
+  margin-right: 30px;
+}
+.nav-avatar {
+  width: 40px;
+}
+
+.slick-next,
+.slick-prev {
+  font-size: large !important;
+  z-index: 3 !important;
+}
+
+.slick-prev {
+  margin-left: 2rem;
+}
+
+.slick-next {
+  margin-right: 4.5rem;
+}
+
+/* per colore dropdown genres */
+.dropdown-menu {
+  background-color: #343a40;
+}
+
+.dropdown-menu .dropdown-item {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-menu .dropdown-item:hover {
+  background-color: #212529; /* Cambio di colore del background al passaggio del mouse */
+  color: black; /* Cambio di colore del testo al passaggio del mouse */
 }
