@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import MovieDetails from "./MovieDetails"; // Importa il componente MovieDetails
 import { Link } from "react-router-dom";
 
 const SingleMovie = ({ img, title, year, id }) => {
   const [showDetails, setShowDetails] = useState(false);
-  const [currentMovieId, setCurrentMovieId] = useState(null);
 
-  const handleClick = () => {
+  const handleMouseEnter = () => {
     setShowDetails(true);
-    setCurrentMovieId(id);
   };
 
-  const handleClose = () => {
+  const handleMouseLeave = () => {
     setShowDetails(false);
-    setCurrentMovieId(null);
   };
 
   return (
@@ -24,15 +20,16 @@ const SingleMovie = ({ img, title, year, id }) => {
           className="poster"
           alt="movie poster"
           style={{ width: "95%", height: "300px", objectFit: "fill", objectPosition: "50% 50%" }}
-          onClick={handleClick}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         />
       </Link>
-      {showDetails && currentMovieId === id && (
+
+      {showDetails && (
         <div className="overlay">
           <div className="details">
             <p className="mx-2">{title}</p>
             <p>- {year} -</p>
-            <button onClick={handleClose}>Close</button>
           </div>
           {/* <MovieDetails img={img} title={title} year={year} /> */}
         </div>
