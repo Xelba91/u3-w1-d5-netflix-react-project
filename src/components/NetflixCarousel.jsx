@@ -75,7 +75,7 @@ class NetflixCarousel extends Component {
         {/* Renderizza il componente Slider con le impostazioni e la classe specificate  */}
         {movies.map((movie) => (
           <Col key={movie.imdbID} className="text-center">
-            <SingleMovie year={movie.Year} title={movie.Title} img={movie.Poster} />
+            <SingleMovie id={movie.imdbID} year={movie.Year} title={movie.Title} img={movie.Poster} />
           </Col>
         ))}
       </Slider>

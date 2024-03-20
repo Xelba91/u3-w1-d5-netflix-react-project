@@ -6,6 +6,7 @@ import logo from "../assets/logo.png";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { BellFill, Search } from "react-bootstrap-icons";
 import Avatar from "../assets/avatar.png";
+import { Link } from "react-router-dom";
 
 function NetflixNavbar() {
   return (
@@ -17,8 +18,13 @@ function NetflixNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#tvshows">Tv Shows</Nav.Link>
+            <Link to="/">
+              <div className="nav-link my-auto">Home</div>
+            </Link>
+            <Link to="/1">
+              <div className="nav-link">Tv Shows </div>
+            </Link>
+
             <Nav.Link href="#movies">Movies</Nav.Link>
             <Nav.Link href="#recent">Recently Added</Nav.Link>
             <Nav.Link href="#mylist">My List</Nav.Link>

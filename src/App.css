@@ -57,3 +57,7 @@ p {
   transition: 0.5s;
   cursor: pointer;
 }
+a {
+  margin-top: auto;
+  margin-bottom: auto;
+}
