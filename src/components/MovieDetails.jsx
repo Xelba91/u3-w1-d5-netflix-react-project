@@ -6,9 +6,12 @@ const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
   const [comments, setComments] = useState([]);
 
+  let url = `http://www.omdbapi.com/?apikey=2a3fd527&i=` + movieId;
+  console.log(url);
   useEffect(() => {
     // Effettua la richiesta per ottenere i dettagli del film dall'API esterna (OMDbAPI)
-    fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=845ffd1f&movie&s=${movieId}`)
+    fetch(`http://www.omdbapi.com/?apikey=2a3fd527&i=` + movieId)
+      // http://www.omdbapi.com/?apikey=[PUT_YOUR_API_KEY_HERE]&i=tt0241527
       .then((response) => response.json())
       .then((data) => {
         console.log(movieId);
@@ -29,6 +32,11 @@ const MovieDetails = () => {
     <div>
       {movieDetails && (
         <div>
+          <img
+            src={movieDetails.Poster}
+            alt={movieDetails.Title}
+            style={{ width: "300px", display: "block", margin: "0 auto" }}
+          />
           <h2>{movieDetails.Title}</h2>
           <p>{movieDetails.Plot}</p>
           <p>Director: {movieDetails.Director}</p>
